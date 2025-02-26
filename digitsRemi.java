@@ -15,6 +15,8 @@ You may not just print out the digits. You must figure out an algorithm to isola
 
 */
 
+import java.util.*;
+
 public class digitsRemi{
     public static void main(String[]args){
 
@@ -27,8 +29,16 @@ int ones;
 int tens;
 int hundreds;
 int thousands;
+Scanner input = new Scanner(System.in);
 
-number = 2587;
+
+
+System.out.println("Enter a four digit number");
+
+number = input.nextInt();
+
+
+
 ones = number % 10;
 tens = (number / 10) % 10;
 hundreds =  ((number / 10)/10) % 10;
