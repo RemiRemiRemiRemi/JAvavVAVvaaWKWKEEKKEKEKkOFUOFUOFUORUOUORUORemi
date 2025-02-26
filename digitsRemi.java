@@ -26,17 +26,20 @@ int number;
 int ones;
 int tens;
 int hundreds;
+int thousands;
 
-number = 258;
+number = 2587;
 ones = number % 10;
 tens = (number / 10) % 10;
 hundreds =  ((number / 10)/10) % 10;
-
+thousands = (((number / 10)/10)/10) % 10;
     
+System.out.println(thousands);
 System.out.println(hundreds);
 System.out.println(tens);
 System.out.println(ones);
 
+System.out.println("In the number " + number + " the ones place has the number " + ones + " the tens place has " + tens + " the hundreds place has " + hundreds + " and the thousands place has " + thousands);
 
     }
 }
