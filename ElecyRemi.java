@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 import java.util.*;
-
+import java.text.NumberFormat;
 
 public class ElecyRemi {
     public static void main(String[]args){
@@ -33,11 +33,14 @@ System.out.println("How many votes did the second candidate get?");
 votes2 = input.nextDouble();
 
 total = votes1 + votes2;
+NumberFormat percent = NumberFormat.getPercentInstance();
 
 System.out.println("Here are the results!");
 System.out.println("Candidate\tVotes\tPercentage");
-System.out.println(name1 + "\t" + votes1 + "\t" + (votes1 / total)*100);
-System.out.println(name2 + "\t" + votes2 + "\t" + (votes2 / total)*100);
+System.out.println(name1 + "\t" + votes1 + "\t" + (percent.format(votes1/100)));
+System.out.println(name2 + "\t" + votes2 + "\t" + (percent.format(votes2/100)));
+
+
 
 
     }
